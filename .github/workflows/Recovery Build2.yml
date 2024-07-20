@@ -114,12 +114,12 @@ jobs:
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
       continue-on-error: true
 
-    - name: Check the output directory before uploading
+    - name: Check the output directory before uploading -
       run: |
         ls -al ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/
         echo
         ls -al ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/
-        zip -r check.zip /home/runner/work/Orange-Fox-builder/Orange-Fox-builder/workspace/fox_11.0/out/target/product/
+        zip -r check.zip /home/runner/work/Orange-Fox-builder/Orange-Fox-builder/workspace/fox_11.0/
         cp check.zip /home/runner/work/Orange-Fox-builder/Orange-Fox-builder/workspace/fox_11.0/out/target/product/ossi/
 
     - name: Upload to Release
