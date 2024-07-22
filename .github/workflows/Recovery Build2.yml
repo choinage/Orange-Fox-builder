@@ -120,15 +120,7 @@ jobs:
         ls -al ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/
         echo ossi
         ls -al ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/
-        echo workspace
-        ls /home/runner/work/Orange-Fox-builder/Orange-Fox-builder/workspace/
-        echo fox11
-        ls /home/runner/work/Orange-Fox-builder/Orange-Fox-builder/workspace/fox_11.0/
-        echo out
-        ls /home/runner/work/Orange-Fox-builder/Orange-Fox-builder/workspace/fox_11.0/out/
-        echo target
-        ls /home/runner/work/Orange-Fox-builder/Orange-Fox-builder/workspace/fox_11.0/out/target/
-        echo end
+      
 
     - name: Upload to Release
       uses: softprops/action-gh-release@v1
