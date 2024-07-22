@@ -114,7 +114,7 @@ jobs:
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
       continue-on-error: true
 
-    - name: Check the output directory before uploading --
+    - name: Check the output directory before uploading
       run: |
         echo product
         ls -al ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/
